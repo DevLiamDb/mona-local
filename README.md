@@ -42,7 +42,7 @@
 
 ---
 
-> Mona is a small desktop app for web designers. It opens your page in a test Chrome, scrolls it to the bottom like a visitor, then runs AI models **on your own PC** to predict gaze, estimate the brain's reaction and check readability. Nothing is uploaded.
+> I built Mona to show web designers what a first-time visitor sees: it opens your page in a test Chrome, then runs AI models **on your own PC** to predict gaze, estimate the brain's reaction and score readability, with nothing uploaded. The code and the models are in this [GitHub repository](https://github.com/LiamLitle/mona-local), and I explain the method and share the measurements on [mona.devliam.com](https://mona.devliam.com).
 
 <div align="center">
 <table>
