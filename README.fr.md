@@ -1,45 +1,148 @@
-<p align="center"><img src="docs/banner.gif" alt="Mona : le David de Michel-Ange en ASCII, balayé par une lumière" width="420"></p>
+<div align="right">
 
-<h1 align="center">Mona</h1>
+[🇬🇧 English](README.md) | 🇫🇷 Français
 
-<p align="center"><b>Vois ton site comme le verrait un nouveau visiteur.</b><br>
-Mona devine où les yeux se posent sur une page web et comment le cerveau réagit, vérifie la lisibilité et donne une note sur 100.<br>
-Une petite application de bureau : les modèles d'IA tournent sur ton PC, rien n'est envoyé ailleurs.</p>
+</div>
 
-<p align="center">
-  <a href="LICENSE"><img alt="Licence : usage personnel" src="https://img.shields.io/badge/licence-usage%20personnel-d9b877"></a>
-  <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white">
-  <img alt="Plateformes" src="https://img.shields.io/badge/Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-lightgrey">
-  <img alt="L'IA tourne sur ton PC" src="https://img.shields.io/badge/IA-tourne%20sur%20ton%20PC-9bc7a8">
-  <img alt="Modèles ONNX inclus" src="https://img.shields.io/badge/mod%C3%A8les-ONNX%20inclus-005CED?logo=onnx&logoColor=white">
-</p>
+<div align="center">
 
-<p align="center"><a href="README.md">English</a> · <a href="https://mona.devliam.com/">Site</a> · <a href="https://mona.devliam.com/benchmarks.html">Mesures</a> · <a href="docs/MODELS.md">Modèles d'IA</a> · <a href="docs/ARCHITECTURE.md">Architecture</a> · <a href="TERMS.md">Conditions</a> · <a href="PRIVACY.md">Confidentialité</a></p>
+<img src="docs/banner.gif" alt="Mona : le David de Michel-Ange en ASCII, balayé par une lumière" width="420">
 
-<p align="center"><img src="docs/demo.gif" alt="Mona analyse une page web : animation en caractères, puis le rapport" width="720"></p>
+# MONA
 
-## Ce que fait Mona
+**Vois ton site comme le verrait un nouveau visiteur.**
 
-- **Prédiction du regard** : une carte de chaleur de ce que les gens regardent en premier, avec deux modèles d'IA appris sur de vrais regards (62 personnes, 1 980 interfaces).
-- **Réaction du cerveau** : une estimation de la réponse de 20 zones visuelles du cortex (indicatif, appris sur des données d'IRM).
-- **Note de lisibilité** : six vérifications (contraste du texte, taille du texte, bouton principal, hiérarchie visuelle, quantité de texte, surcharge) réunies en une note sur 100, avec des conseils pour chaque écran.
-- **Détecteur d'éléments** : repère les textes, boutons, images, champs et icônes sur une capture, une maquette ou un export Figma.
-- **Un vrai Chrome regarde la page** : colle une adresse, Mona ouvre un Chrome de test, fait défiler la page jusqu'en bas comme un visiteur, puis la lit. Ou dépose une image.
-- **S'adapte à ton PC** : Mona lit ton processeur, ta mémoire et ta carte graphique, puis choisit à quel point travailler (et laisse un quart des cœurs libres).
-- **Privé par conception** : pas de compte, pas de suivi. Le seul trafic réseau est la visite du site que tu analyses.
+[![Licence](https://img.shields.io/badge/licence-usage%20personnel-d9b877?labelColor=141413)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-d9b877?labelColor=141413&logo=python&logoColor=white)](https://www.python.org/downloads/)
+![Systèmes](https://img.shields.io/badge/Windows%20·%20macOS%20·%20Linux-8a8a84?labelColor=141413)
+![IA](https://img.shields.io/badge/IA-tourne%20sur%20ton%20PC-9bc7a8?labelColor=141413)
+![Modèles](https://img.shields.io/badge/mod%C3%A8les-ONNX%20inclus-9bc7a8?labelColor=141413&logo=onnx&logoColor=white)
+![Chrome](https://img.shields.io/badge/capture-vrai%20Chrome-d9b877?labelColor=141413&logo=googlechrome&logoColor=white)
+![Cloud](https://img.shields.io/badge/cloud-aucun-d98577?labelColor=141413)
 
-## Installer et lancer
+<br>
 
-Il faut Python 3.10 ou plus récent. [Télécharge le ZIP](https://github.com/LiamLitle/mona-local/archive/refs/heads/main.zip) (les modèles d'IA sont dedans) ou clone le dépôt, puis :
+**Tu as dessiné la page. Tu ne peux plus la voir pour la première fois.**
+
+**Mona devine où se posent les yeux d'un nouveau visiteur, et te dit ce qui le gêne.**
+
+*Créé par Liam DB, avec l'aide de l'IA.*
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="docs/demo.gif" width="760" alt="Mona analyse une page web : animation en caractères, puis le rapport">
+
+*Mona sur une page web : une statue en ASCII pendant le travail, puis le rapport.*
+
+</div>
+
+---
+
+> Mona est une petite application de bureau pour les designers web. Elle ouvre ta page dans un Chrome de test, la fait défiler jusqu'en bas comme un visiteur, puis lance des modèles d'IA **sur ton propre PC** pour deviner le regard, estimer la réaction du cerveau et vérifier la lisibilité. Rien n'est envoyé.
+
+<div align="center">
+<table>
+<tr>
+<td align="center" width="16%">
+
+**👁️ Regard**<br>
+Une carte de chaleur<br>
+de ce qu'on voit d'abord,<br>
+avec 2 modèles
+
+</td>
+<td align="center" width="16%">
+
+**🧠 Cerveau**<br>
+Réponse de 20 zones<br>
+visuelles du cortex<br>
+(indicatif)
+
+</td>
+<td align="center" width="16%">
+
+**📊 Note /100**<br>
+Six vérifications<br>
+de lisibilité, avec<br>
+des conseils par écran
+
+</td>
+<td align="center" width="16%">
+
+**🔎 Détecteur**<br>
+Repère textes, boutons,<br>
+images, champs, icônes<br>
+sur toute capture
+
+</td>
+<td align="center" width="16%">
+
+**🏠 100 % local**<br>
+Pas de compte, pas<br>
+de cloud, pas<br>
+de suivi
+
+</td>
+<td align="center" width="16%">
+
+**⚙️ S'adapte à ton PC**<br>
+Lit ton processeur,<br>
+ta mémoire, ta carte<br>
+graphique, puis choisit
+
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+## 📏 Pourquoi Mona
+
+Un avis sur un design est facile à donner et difficile à vérifier. Mona donne des chiffres, mesurés sur des cas **jamais vus pendant l'apprentissage**.
+
+| Quoi | Résultat |
+|---|:---:|
+| Regard comparé à de vrais regards (UEyes) | corrélation **0,68** |
+| Regard sur des pages web d'un autre jeu de données (Imp1k) | corrélation **0,56** |
+| Détecteur d'éléments (texte, bouton, image) | F1 **0,64** |
+| Note depuis une image seule comparée à celle du code de la page | **5,5 points** sur 100 d'écart en moyenne |
+
+Mona n'a pas toujours raison. Le modèle du cerveau vient d'un seul sujet : une indication, pas un diagnostic. Mona mesure la lisibilité et l'attention, **pas le goût**, et ne remplace ni un test avec de vraies personnes ni un audit d'accessibilité. La méthode et les limites sont sur le [site](https://mona.devliam.com/benchmarks.html).
+
+---
+
+## 🎯 À quoi ça sert
+
+- **Vérifier un design avant de le montrer :** où va l'œil en premier, et est-ce le bon endroit ?
+- **Trouver le bouton principal :** l'appel à l'action est-il visible dès le premier écran, qui compte pour la moitié de la note ?
+- **Contraste et taille du texte :** un passage rapide de type WCAG sur chaque écran d'une longue page.
+- **Maquettes et exports Figma :** dépose une image, le détecteur lit l'interface depuis les pixels.
+- **Comparer deux versions :** analyse chacune, garde les deux rapports, compare les deux notes.
+- **Tes sites, ton ordinateur :** pas besoin d'envoyer une maquette inédite à un outil en ligne.
+
+---
+
+## 📦 Installation
+
+> Prérequis : **Python 3.10+**. Les modèles d'IA sont déjà dans le dépôt.
+>
+> Testé sur **Windows 11** et **Ubuntu** (WSL). macOS n'est pas encore testé.
+
+[Télécharge le ZIP](https://github.com/LiamLitle/mona-local/archive/refs/heads/main.zip) ou clone le dépôt, puis :
 
 | | |
 |---|---|
 | **Windows** | double-clique sur **`Mona.bat`** |
 | **macOS, Linux** | lance **`./mona.sh`** |
 
-La première fois, tout s'installe tout seul (quelques minutes : paquets Python et Chrome de test, environ 150 Mo). Ensuite, l'application s'ouvre directement, dans sa propre fenêtre.
+La première fois, le lanceur installe tout : les paquets Python et le Chrome de test, environ 150 Mo, quelques minutes. Ensuite l'application s'ouvre tout de suite, dans sa propre fenêtre.
 
-<details><summary>Ou à la main</summary>
+**Tu préfères le faire à la main ?**
 
 ```bash
 pip install -r requirements.txt
@@ -47,74 +150,203 @@ python -m mona setup      # installe le Chrome de test, une seule fois
 python -m mona            # ouvre l'application
 ```
 
-Pour une fenêtre native au lieu d'une fenêtre Chrome/Edge en mode application : `pip install -r requirements-app.txt`.
-</details>
+Pour une fenêtre native à la place d'une fenêtre Chrome/Edge : `pip install -r requirements-app.txt`.
 
-## Commandes
+---
+
+## 🚀 Utilisation
+
+### 1. Analyser un site
+
+Colle une adresse. Mona l'ouvre dans un Chrome de test en 1440 × 900, fait défiler jusqu'en bas (12 écrans au plus), lit les textes, tailles, couleurs et boutons de chaque écran, puis lance les modèles.
+
+### 2. Analyser une image
+
+Dépose une capture, une maquette ou un export Figma. Les images longues sont découpées en écrans, le **détecteur** repère les éléments de l'interface et le **plan B** reconstruit ce que le code de la page aurait donné. La note est alors indicative (environ 5,5 points d'écart).
+
+### 3. Lire le rapport
+
+Une carte du regard et une note pour chaque écran, une réaction du cerveau, un conseil par règle. Le premier écran compte pour la moitié de la note finale. Les rapports restent dans le stockage de l'application, sur ton PC. Exporte-les en JSON ou imprime-les en PDF.
+
+### 4. Utiliser la ligne de commande *(facultatif)*
 
 ```bash
-python -m mona                      # ouvre l'application
-python -m mona analyze https://exemple.com    # analyse sans interface
-python -m mona analyze capture.png            # analyse une image
-python -m mona doctor               # ton PC, les réglages choisis, l'état des modèles
-python -m mona setup                # installe le Chrome de test
+python -m mona analyze https://example.com    # analyser sans l'interface
+python -m mona analyze capture.png            # analyser une image
+python -m mona doctor               # ton PC, les réglages choisis par Mona, l'état des modèles
 python -m mona serve                # serveur seul, sans fenêtre
-python -m pytest                    # lance les tests
 ```
 
-Variables d'environnement : `MONA_PORT`, `MONA_MAX_SCREENS` (12 par défaut), `MONA_HEADLESS=1` (cacher le Chrome de test), `MONA_HOME` (où sont gardés les réglages).
+### 5. Lancer les tests *(facultatif)*
 
-## Où est quoi ?
+```bash
+python -m pytest
+```
+
+Variables d'environnement : `MONA_PORT`, `MONA_MAX_SCREENS` (12 par défaut), `MONA_HEADLESS=1` (cacher le Chrome de test), `MONA_HOME` (où sont rangés les réglages).
+
+---
+
+## 🗿 Les modèles d'IA
+
+Mona contient **ses propres modèles d'IA**, dans [`models/`](models). Ils n'écrivent pas de texte et ne te parlent pas : chacun transforme une page en carte ou en liste.
+
+| Modèle | Fichier | Ce qu'il fait |
+|---|---|---|
+| **Regard A et B** | `gaze_a.onnx`, `gaze_b.onnx` | Devinent où les yeux se posent. Leurs deux cartes sont moyennées. Appris sur des données de suivi du regard (62 personnes, 1 980 interfaces). |
+| **Cerveau** | `brain.onnx` | Estime la réponse de 20 zones visuelles, en percentile face à environ 500 pages web. Appris sur des données d'IRM. Indicatif, hors de la note. |
+| **Détecteur** | `detector.onnx` | Repère textes, boutons, images, champs et icônes sur une capture. |
+| **Plan B** | `plan_b_params.json` | Transforme la sortie du détecteur en les mêmes informations que le code de la page. |
+
+- **Où ils tournent :** sur ton processeur ou ta carte graphique, au format ONNX, avec onnxruntime. Pas de cloud, aucun appel d'API. [`mona/hardware.py`](mona/hardware.py) lit ton PC, choisit les threads et le parallélisme, et laisse un quart des cœurs libres.
+- **Intégrité :** `models/MODELS.json` liste la taille et le SHA-256 de chaque fichier, pour vérifier qu'ils sont intacts.
+- **Licences :** les données d'apprentissage et les poids pré-entraînés ont leurs propres conditions. Le modèle du cerveau dérive d'images réservées à la recherche et ne sert qu'à de la recherche non commerciale.
+
+Le rôle, l'entrée, la sortie, les données d'apprentissage et la licence de chaque modèle sont dans [`docs/MODELS.md`](docs/MODELS.md).
+
+---
+
+<details>
+<summary><b>🗂️ Structure des fichiers</b></summary>
+<br>
 
 ```
 mona-local/
-├── models/        ← LES MODÈLES D'IA (*.onnx) + MODELS.json  → docs/MODELS.md
-├── mona/
-│   ├── ai/        fait tourner les modèles : regard, cerveau, détecteur, plan B
-│   ├── capture.py le Chrome de test : ouvrir, défiler, capturer
-│   ├── rules.py   les six règles de lisibilité et la note
-│   ├── pipeline.py, server.py, desktop.py, hardware.py
-│   └── web/       l'interface
-├── docs/          ARCHITECTURE.md, MODELS.md
-├── tests/         tests automatiques
-├── Mona.bat · mona.sh   lanceurs en un clic
+├── Mona.bat · mona.sh    ← lanceurs en un clic ← COMMENCE ICI
+├── models/               ← LES MODÈLES D'IA (*.onnx) + MODELS.json
+├── mona/                 ← l'application
+│   ├── ai/               ← fait tourner les modèles : regard, cerveau, détecteur, plan B
+│   ├── capture.py        ← le Chrome de test : ouvrir, défiler, capturer
+│   ├── rules.py          ← six règles de lisibilité et la note
+│   ├── pipeline.py       ← enchaîne tout, signale l'avancement par événements
+│   ├── server.py         ← API locale (127.0.0.1 seulement)
+│   ├── desktop.py        ← lance le serveur, ouvre la fenêtre
+│   ├── hardware.py       ← lit ton PC, choisit les réglages
+│   └── web/              ← l'interface (fichiers simples, sans compilation)
+├── docs/                 ← ARCHITECTURE.md, MODELS.md, bannière et démo
+├── tests/                ← tests automatiques
+├── tools/                ← scripts de maintenance
 └── LICENSE, TERMS.md, PRIVACY.md, NOTICE.md
 ```
 
-- **Les modèles d'IA** sont dans [`models/`](models) et livrés avec le dépôt. [`docs/MODELS.md`](docs/MODELS.md) explique chacun : rôle, entrée et sortie, données d'entraînement, licences.
-- **Comment les pièces s'assemblent** : [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+</details>
 
-## Est-ce fiable ?
+---
 
-Mesuré sur des cas jamais vus à l'entraînement :
+<details open>
+<summary><b>📐 Les six règles de lisibilité</b></summary>
+<br>
 
-| Quoi | Résultat |
+| Règle | Ce qu'elle vérifie | Dans la pratique |
+|---|---|---|
+| **Contraste du texte** | Contraste entre chaque texte et la couleur derrière | Un gris sur blanc qui échoue au WCAG est signalé |
+| **Taille du texte** | Taille des textes qu'on lit | Texte courant trop petit pour lire confortablement |
+| **Bouton principal** | L'action principale est-elle visible et facile à trouver | Un appel à l'action perdu parmi le reste |
+| **Hiérarchie visuelle** | Une chose passe-t-elle clairement en premier | Tout a la même taille, rien ne guide |
+| **Quantité de texte** | Combien de mots se disputent l'attention | Un mur de texte en haut de page |
+| **Surcharge** | À quel point l'écran est chargé | Trop d'éléments qui se battent pour l'œil |
+
+Chaque écran reçoit une note. Le premier écran compte pour la moitié de la note finale sur 100. Les règles sont dans [`mona/rules.py`](mona/rules.py) et reprises sur le site avec les mêmes seuils et les mêmes poids.
+
+</details>
+
+---
+
+<details>
+<summary><b>⚙️ Comment ça marche à l'intérieur</b></summary>
+<br>
+
+```
+fenêtre ──► server.py ──► pipeline.py ──► capture.py (Chrome de test : ouvrir, défiler, lire)
+(pywebview,   (FastAPI,       │
+ ou appli      127.0.0.1)     ├── ai/  regard + cerveau + détecteur (ONNX, onnxruntime)
+ Chrome/Edge)                 └── rules.py  six règles ──► note /100
+```
+
+- **Ouvrir :** le Chrome de test charge l'adresse dans une fenêtre de 1440 × 900. Pour une image, Mona la découpe en écrans de 900 px.
+- **Lire :** pour chaque écran, le code de la page donne textes, tailles, couleurs et boutons. Pour une image, le détecteur les repère et le plan B reconstruit les mêmes informations.
+- **Regarder :** deux modèles devinent où les yeux se posent et leurs cartes sont moyennées. Un modèle estime la réponse du cerveau.
+- **Juger :** les six règles donnent une note par écran, puis la note finale sur 100.
+
+Le schéma complet et la visite fichier par fichier sont dans [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+</details>
+
+---
+
+<details>
+<summary><b>❓ FAQ</b></summary>
+<br>
+
+**C'est gratuit ?**
+Oui, pour un usage personnel non commercial. Voir la licence plus bas.
+
+**Puis-je m'en servir pour un client ou dans mon produit ?**
+Pas sans l'accord écrit de l'auteur. Voir [LICENSE](LICENSE).
+
+**Ça marche sur téléphone ?**
+Non, c'est une application de bureau (Windows, macOS, Linux).
+
+**C'est rapide ?**
+Sur un PC récent, une image prend quelques secondes et une page une dizaine. `python -m mona doctor` montre ce que Mona a choisi pour ta machine.
+
+**Où vont mes rapports ?**
+Nulle part : ils restent dans le stockage de l'application, sur ton PC. Le seul trafic réseau est la visite du site que tu analyses.
+
+**Faut-il une carte graphique ou un compte ?**
+Non. Mona utilise une carte graphique si elle en trouve une, sinon elle tourne sur le processeur. Pas de compte, pas de clé d'API.
+
+**Peut-elle analyser une page derrière une connexion, ou sur localhost ?**
+Pas encore. Le Chrome de test ouvre des adresses publiques. Pour une page privée, fais une capture d'écran et dépose l'image.
+
+</details>
+
+---
+
+## 📖 Histoire et crédits
+
+<details>
+<summary><b>🙏 Crédits : qui et quoi a fait Mona</b></summary>
+<br>
+
+Mona a été **écrit avec l'IA, et on le dit clairement.**
+
+| Qui | Rôle |
 |---|---|
-| Regard contre de vrais regards (UEyes) | corrélation 0,68 |
-| Regard sur des pages web d'un autre jeu de données (Imp1k) | corrélation 0,56 |
-| Détecteur d'éléments (texte, bouton, image) | F1 0,64 |
-| Note depuis une image seule contre note depuis le code de la page | 5,5 points sur 100 d'écart en moyenne |
+| **Liam DB** | Créateur. L'idée, la direction, les décisions, les tests. |
+| **[Claude Code](https://claude.com/claude-code)** (Anthropic) | A écrit le code du projet sous la direction de Liam DB. |
 
-Le modèle du cerveau vient d'une seule personne : une indication, pas un diagnostic. Mona mesure la lisibilité et l'attention, **pas le goût**, et ne remplace ni un test avec de vraies personnes ni un audit d'accessibilité. Détails et méthode : <https://mona.devliam.com/benchmarks.html>.
+**Construit sur :** des données de suivi du regard (UEyes, Imp1k), des données d'IRM (THINGS), [ONNX Runtime](https://onnxruntime.ai/), [Playwright](https://playwright.dev/) et [FastAPI](https://fastapi.tiangolo.com/).
 
-## Questions fréquentes
+**Trouver le créateur :** [devliam.com](https://devliam.com) · [mona.devliam.com](https://mona.devliam.com)
 
-**C'est gratuit ?** Oui, pour un usage personnel et non commercial. Voir la licence ci-dessous.
+La liste complète des données, modèles, bibliothèques et licences est dans [NOTICE.md](NOTICE.md). Pour citer Mona, utilise le bouton « Cite this repository » de GitHub ([CITATION.cff](CITATION.cff)).
 
-**Ça marche sur téléphone ?** Non, c'est une application de bureau (Windows, macOS, Linux).
+</details>
 
-**C'est rapide ?** Sur un PC récent, une image prend quelques secondes et une page une dizaine. `python -m mona doctor` montre ce que Mona a choisi pour ta machine.
+---
 
-**Je peux m'en servir pour des clients ou dans mon produit ?** Pas sans l'accord écrit de l'auteur. Voir [LICENSE](LICENSE).
+## ⚖️ Licence
 
-**Où vont mes rapports ?** Nulle part : ils restent dans le stockage de l'application, sur ton PC. Tu peux les exporter en JSON ou les imprimer en PDF.
+**Mona Personal Use License** ([LICENSE](LICENSE), avec traduction française)
 
-## Licence et cadre légal
+✅ Gratuit pour toi : usage personnel, pédagogique, recherche
+✅ Lire et modifier le code pour ton propre usage
+✅ Tes rapports t'appartiennent
+❌ Pas de redistribution, pas de vente, pas d'usage pour gagner de l'argent (travail pour un client et services en ligne compris)
+❌ Pas d'entraînement d'autres modèles avec Mona
+❌ Crédit obligatoire (« Mona by Liam DB ») dès que tu montres ou publies quelque chose qui s'en sert
 
-**Mona Personal Use License** ([LICENSE](LICENSE), avec traduction française) : utilise-la pour toi, gratuitement. **Pas** de redistribution, **pas** de vente, **pas** d'usage pour gagner de l'argent (y compris travail pour des clients et services en ligne), **pas** d'entraînement d'autres modèles avec, et un **crédit visible** (« Mona par Liam DB ») dès que tu montres ou publies quelque chose qui l'utilise. C'est du *source-available*, pas de l'open source. Pour tout autre usage, demande d'abord à l'auteur.
+C'est du *source disponible*, pas de l'open source. Pour tout le reste, demande d'abord à l'auteur.
 
-- [Conditions d'utilisation](TERMS.md) · [Politique de confidentialité](PRIVACY.md) · [Données et licences tierces](NOTICE.md)
-- Les données d'entraînement et les poids préentraînés ont leurs propres conditions ; le modèle du cerveau dérive d'images réservées à la recherche et ne s'utilise qu'en recherche non commerciale.
-- Pour citer Mona, utilise le bouton « Cite this repository » de GitHub ([CITATION.cff](CITATION.cff)).
+[Conditions d'utilisation](TERMS.md) · [Confidentialité](PRIVACY.md) · [Données et licences tierces](NOTICE.md)
 
-<sub>Mots-clés : analyse de page web, saillance visuelle, prédiction du regard, carte de chaleur d'attention, audit UX, note de lisibilité, contraste WCAG, analyse de maquette Figma, détection d'éléments d'interface, ONNX, Playwright, application de bureau.</sub>
+---
+
+<div align="center">
+
+Créé par Liam DB, avec l'aide de l'IA.
+
+</div>
+
+<sub>Mots-clés : analyse de page web, saillance visuelle, prédiction du regard, carte de chaleur de l'attention, audit UX, note de lisibilité, contraste WCAG, analyse de maquette Figma, détection d'éléments d'interface, ONNX, Playwright, application de bureau.</sub>
